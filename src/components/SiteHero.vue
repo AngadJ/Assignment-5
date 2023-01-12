@@ -20,20 +20,17 @@
    font-size: 90px;
  
 }
+
 img {
    width: 1200px;
    position: relative;
    bottom: 80px;
    left: 10px;
-   border-color: rgb(58, 186, 237);
+   border-color: navy;
    border-style: double;
    border-width: 20px;
  
 }
  
-:hover {
- border-width: 15px;
- border-color: white;
- 
-}
+
 </style>

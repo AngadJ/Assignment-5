@@ -1,11 +1,12 @@
-<script setup>
-</script>
- 
+<script setup></script>
+
 <template>
-      <div class="app-comtainer">
+  <div class="app-container">
+    <Suspense>  
     <RouterView />
-      </div>
+    </Suspense>
+  </div>
 </template>
- 
+
 <style scoped>
 </style>

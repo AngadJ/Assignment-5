@@ -1,4 +1,5 @@
 <script setup>
+import SiteFooter from "../components/SiteFooter.vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
@@ -25,7 +26,9 @@ const login = () => {
      <p>Incorrect! Hint: use tmdb for username and movies for password</p>
    </div>
  </div>
- 
+ <div>
+        <SiteFooter />
+    </div>
 </template>
 <style scoped>
 .login-container {
@@ -65,6 +68,19 @@ h1 {
  
  :hover {
   border-color: white;
+
+}
+
+footer {
+  font-size: 15px;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(58, 186, 237);
+  color: navy;
+  position: relative;
+  bottom: 350px;
+
 }
 </style>
 

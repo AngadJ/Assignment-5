@@ -40,6 +40,6 @@ button {
  
 :hover {
   border-width: 15px;
-  border-color: white;
+  border-color: navy;
 }
 </style>
