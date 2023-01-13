@@ -36,10 +36,13 @@ button {
   font-family: 'Play', sans-serif;
   font-size: 25px;
   font-weight: bolder;
+
 }
  
 :hover {
   border-width: 15px;
   border-color: navy;
+  
 }
+
 </style>

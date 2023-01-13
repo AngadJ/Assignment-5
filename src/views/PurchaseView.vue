@@ -44,6 +44,7 @@ console.log(data)
     font-family: 'Zen Dots', cursive;
     padding: 20px;
     font-size: 25px;
+    
    }
    
    :hover {
@@ -51,16 +52,18 @@ console.log(data)
     border-color: white
  
   }
-img {
+
+  img {
   width: 270px; 
   border-style: double;
   border-color: rgb(58, 186, 237);
   border-width: 15px;
   margin-right: 10px;
   margin-top: 15px;
-}
 
-.footer {
+  }
+
+  .footer {
   font-size: 15px;
   font-family: 'Play', sans-serif;
   text-align: center;
@@ -71,4 +74,5 @@ img {
   bottom: -10px;
   
 }
+
 </style>

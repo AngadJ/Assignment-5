@@ -2,6 +2,7 @@
 import SiteFooter from "../components/SiteFooter.vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+
 const router = useRouter();
 const username = ref("");
 const password = ref("");
@@ -14,6 +15,7 @@ const login = () => {
  }
 };
 </script>
+
 <template>
  <div class="login-container">
    <h1> Please login with username and password to browse movies.</h1>
@@ -30,6 +32,7 @@ const login = () => {
         <SiteFooter />
     </div>
 </template>
+
 <style scoped>
 .login-container {
  display: flex;
@@ -44,6 +47,7 @@ const login = () => {
  border-color: navy;
  border-width: 10px;
  margin-bottom: 220px;
+
 }
  
 form {
@@ -64,6 +68,7 @@ form input {
  
 h1 {
   font-size: 30px;
+  
 }
  
  :hover {

@@ -42,6 +42,7 @@ console.log(info)
   z-index: 3;
   font-size: 25px;
   font-family: 'Kalam', cursive;
+
 }
 .modal-outer-container .modal-inner-container {
   background-color: rgb(29, 28, 28);
@@ -60,7 +61,9 @@ console.log(info)
   font-weight: bold;
   font-size: 1.25rem;
   color: white;
+
 }
+
 img {
   width: 280px;
   height: 400px;
@@ -68,12 +71,7 @@ img {
   border-style: solid;
   border-color: rgb(58, 186, 237);
   border-width: 2px;
+
 }
-iframe {
-  width: 320px;
-  height: 170px;
-  border-style: solid;
-  border-color: rgb(58, 186, 237);
-  border-width: 5px;
-}
+
 </style>

@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import SiteModal from './SiteModaltesting.vue';
+
 const showModal = ref(false);
 const selectedId = ref(0);
 const openModal = (id) => {
@@ -21,4 +22,5 @@ const closeModal = () => {
 </template>
 
 <style scoped>
+
 </style>
