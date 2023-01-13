@@ -8,6 +8,7 @@ const openModal = (id) => {
   showModal.value = true;
   selectedId.value = id;
 };
+
 const closeModal = () => {
   showModal.value = false;
 };

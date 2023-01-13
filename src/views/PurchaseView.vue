@@ -3,15 +3,18 @@ import SiteFooter from "../components/SiteFooter.vue";
 import axios from "axios";
 import { ref } from 'vue';
 import SiteModal from '../components/SiteModal.vue';
+
 const showModal = ref(false);
 const selectedId = ref(0);
 const openModal = (id) => {
   showModal.value = true;
   selectedId.value = id;
 };
+
 const closeModal = () => {
   showModal.value = false;
 };
+
 let data = (await axios.get("https://api.themoviedb.org/3/trending/movie/week", {
     params: {
         api_key: "f944b70daa59b60504fca0c383e63483"
@@ -44,7 +47,7 @@ console.log(data)
     font-family: 'Zen Dots', cursive;
     padding: 20px;
     font-size: 25px;
-    
+
    }
    
    :hover {
