@@ -60,7 +60,7 @@ img {
   margin-top: 15px;
 }
 
-footer {
+.footer {
   font-size: 15px;
   font-family: 'Play', sans-serif;
   text-align: center;

@@ -71,7 +71,7 @@ h1 {
 
 }
 
-footer {
+.footer {
   font-size: 15px;
   font-family: 'Play', sans-serif;
   text-align: center;

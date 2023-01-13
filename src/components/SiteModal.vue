@@ -12,15 +12,17 @@ console.log(info)
 </script>
 
 <template>
-
   <Teleport to="body">
     <div class="modal-outer-container" @click.self="emits('toggleModal')">
       <div class="modal-inner-container">
         <button class="close-button" @click="emits('toggleModal')">X</button>
         <img :src="`https://image.tmdb.org/t/p/w500${info.data.poster_path}`" alt="">
-        <h1> {{info.data.original_title}} </h1>
-        <p>  Release Date: {{info.data.release_date}} -  Rating: {{info.data.vote_average}} -  Stars Popularity: {{info.data.popularity}} <br> Box Office: {{info.data.revenue}} USD </p>
-        <iframe :src="`https://www.youtube.com/embed/${info.data.videos.results.filter((video) => video.type === 'Trailer').at(0).key}`"></iframe>
+        <p> {{info.data.original_title}}</p>
+        <p> Release Date: {{info.data.release_date}}</p>
+        <p> Rating: {{info.data.vote_average}} Stars </p>
+        <p> Popularity: {{info.data.popularity}}</p>
+        <p> Box Office: {{info.data.revenue}} USD </p>
+        <p><a :href="`https://www.youtube.com/embed/${info.data.videos.results.filter((video) => video.type === 'Trailer').at(0).key}`" target="_blank"> Here to View the Movie Trailer! </a></p>
       </div>
     </div>
   </Teleport>
@@ -38,8 +40,8 @@ console.log(info)
   height: 100vh;
   background: #00000099;
   z-index: 3;
-  font-size: 20px;
-  font-family: 'Bangers', cursive;
+  font-size: 25px;
+  font-family: 'Kalam', cursive;
 }
 .modal-outer-container .modal-inner-container {
   background-color: rgb(29, 28, 28);
@@ -59,23 +61,19 @@ console.log(info)
   font-size: 1.25rem;
   color: white;
 }
-
 img {
-  width: 250px;
-  height: 390px;
-  float: left;
+  width: 280px;
+  height: 400px;
+  float: right;
   border-style: solid;
   border-color: rgb(58, 186, 237);
-  border-width: 5px;
+  border-width: 2px;
 }
-
 iframe {
-  width: 400px;
-  height: 230px;
+  width: 320px;
+  height: 170px;
   border-style: solid;
   border-color: rgb(58, 186, 237);
   border-width: 5px;
-
 }
-
 </style>
