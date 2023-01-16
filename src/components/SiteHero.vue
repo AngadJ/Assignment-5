@@ -26,11 +26,11 @@ img {
    position: relative;
    bottom: 80px;
    left: 10px;
-   border-color: navy;
+   border-color: rgb(58, 186, 237);
    border-style: double;
    border-width: 20px;
  
 }
- 
+
 
 </style>

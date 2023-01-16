@@ -19,13 +19,16 @@ h1 {
    font-family: 'Bangers', cursive;
    font-size: 50px;
    border-color: rgb(58, 186, 237);
-   border-width: 10px;
+   border-width: 15px;
    border-style: double;
    padding: 20px;
    width: 290px;
    margin-left: 20px;
+
    text-align: center;
+
  
+
  }
  
 button {
@@ -41,7 +44,7 @@ button {
  
 :hover {
   border-width: 15px;
-  border-color: navy;
+  border-color: rgb(58, 186, 237);
   
 }
 
