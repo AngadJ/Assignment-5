@@ -18,20 +18,39 @@ const closeModal = () => {
 
 const getGenres = async () => {
   await store.getMovies(genre.value);
-
 };
 </script>
 
 <template>
+  <div>
+    <h1>
+      Wondering what movie to watch next? <br />
+      Here are several genres to choose from, click on the movie to get some cool info!
+    </h1>
+  </div>
   <RouterLink to="/cart" custom v-slot="{ navigate }">
     <button @click="navigate" role="link">Cart</button>
   </RouterLink>
-  <select v-model="genre" @change="getGenres()">
+  <select v-model="genre" class="dropdown" @change="getGenres()">
     <option value="28">Action</option>
-    <option value="12">Family</option>
-    <option value="16">Science Fiction</option>
-    <option value="35">Adventure</option>
-    <option value="80">Fantasy</option>
+    <option value="12">Adventure</option>
+    <option value="878">Science Fiction</option>
+    <option value="16">Animation</option>
+    <option value="35">Comedy</option>
+    <option value="80">Crime</option>
+    <option value="99">Documentary</option>
+    <option value="18">Drama</option>
+    <option value="10751">Family</option>
+    <option value="14">Fantasy</option>
+    <option value="36">History</option>
+    <option value="27">Horror</option>
+    <option value="10402">Music</option>
+    <option value="9648">Mystery</option>
+    <option value="10749">Romance</option>
+    <option value="10770">TV Movie</option>
+    <option value="53">Thriller</option>
+    <option value="10752">War</option>
+    <option value="37">Western</option>
   </select>
   <div class="purchase-container">
     <img
@@ -39,19 +58,59 @@ const getGenres = async () => {
       :id="movie.id"
       @click="openModal(movie.id)"
       :src="`https://image.tmdb.org/t/p/w500${movie.poster}`"
-    /> 
+    />
     <SiteModal v-if="showModal" @toggleModal="closeModal()" :id="selectedId" />
   </div>
 </template>
 
 <style scoped>
+h1 {
+  color: white;
+  border-color: rgb(58, 186, 237);
+  border-width: 15px;
+  border-style: double;
+  font-family: "Zen Dots", cursive;
+  padding: 20px;
+  font-size: 25px;
+}
 .purchase-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
 }
+
 img {
+  width: 195px;
+  border-style: double;
+  border-color: rgb(58, 186, 237);
+  border-width: 15px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+img:hover {
+  border-color: white;
+}
+
+button:hover {
+  border-color: white;
+}
+
+button {
+  padding: 10px;
+  width: 100px;
+  font-size: 20px;
+  font-family: "Play", sans-serif;
+  border-color: rgb(58, 186, 237);
+  border-width: 5px;
+}
+.dropdown {
+  padding: 10px;
   width: 200px;
-  aspect-ratio: 2 / 3;
+  font-size: 20px;
+  font-family: "Play", sans-serif;
+  border-color: rgb(58, 186, 237);
+  border-width: 5px;
+  margin-left: 10px;
 }
 </style>
