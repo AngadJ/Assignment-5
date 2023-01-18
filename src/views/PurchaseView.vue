@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import SiteFooter from "../components/SiteFooter.vue";
 import SiteModal from "../components/SiteModal.vue";
 import { useStore } from "../store/index.js";
 
@@ -61,6 +62,9 @@ const getGenres = async () => {
     />
     <SiteModal v-if="showModal" @toggleModal="closeModal()" :id="selectedId" />
   </div>
+  <div>
+    <SiteFooter />
+  </div>
 </template>
 
 <style scoped>
@@ -112,5 +116,16 @@ button {
   border-color: rgb(58, 186, 237);
   border-width: 5px;
   margin-left: 10px;
+}
+
+.footer {
+  font-size: 15px;
+  font-family: "Play", sans-serif;
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(58, 186, 237);
+  color: navy;
+  position: relative;
+  top: 30px;
 }
 </style>

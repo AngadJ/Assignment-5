@@ -1,6 +1,8 @@
 <script setup>
 import axios from "axios";
+import { useStore } from "../store/index.js";
 
+const store = useStore();
 const props = defineProps(["id"]);
 const emits = defineEmits(["toggleModal"]);
 
@@ -38,14 +40,14 @@ console.log(info);
         <button
           @click="
             store.addToCart(props.id, {
-              id: data.id,
-              poster: data.poster_path,
-              title: data.title,
-              date: data.release_date,
+              id: info.data.id,
+              poster: info.data.poster_path,
+              title: info.data.title,
+              date: info.data.release_date,
             })
           "
         >
-          Purchase
+          Add To Cart
         </button>
       </div>
     </div>
@@ -92,5 +94,9 @@ img {
   border-style: solid;
   border-color: rgb(58, 186, 237);
   border-width: 2px;
+}
+
+button {
+  padding: 10px;
 }
 </style>

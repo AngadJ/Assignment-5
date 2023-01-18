@@ -17,4 +17,9 @@ img {
   width: 200px;
   aspect-ratio: 2 / 3;
 }
+
+h1 {
+  font-size: 30px;
+  color: rgb(58, 186, 237);
+}
 </style>
