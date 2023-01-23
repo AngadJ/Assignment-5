@@ -8,6 +8,7 @@ const store = useStore();
 const genre = ref(28);
 const showModal = ref(false);
 const selectedId = ref(0);
+
 const openModal = (id) => {
   showModal.value = true;
   selectedId.value = id;
@@ -28,10 +29,8 @@ const getGenres = async () => {
       Wondering what movie to watch next? <br />
       Here are several genres to choose from, click on the movie to get some cool info!
     </h1>
+    <h2>Genres:</h2>
   </div>
-  <RouterLink to="/cart" custom v-slot="{ navigate }">
-    <button @click="navigate" role="link">Cart</button>
-  </RouterLink>
   <select v-model="genre" class="dropdown" @change="getGenres()">
     <option value="28">Action</option>
     <option value="12">Adventure</option>
@@ -39,7 +38,6 @@ const getGenres = async () => {
     <option value="16">Animation</option>
     <option value="35">Comedy</option>
     <option value="80">Crime</option>
-    <option value="99">Documentary</option>
     <option value="18">Drama</option>
     <option value="10751">Family</option>
     <option value="14">Fantasy</option>
@@ -53,6 +51,11 @@ const getGenres = async () => {
     <option value="10752">War</option>
     <option value="37">Western</option>
   </select>
+
+  <RouterLink to="/cart" custom v-slot="{ navigate }">
+    <button @click="navigate" role="link">Cart</button>
+  </RouterLink>
+
   <div class="purchase-container">
     <img
       v-for="movie in store.movies"
@@ -62,6 +65,7 @@ const getGenres = async () => {
     />
     <SiteModal v-if="showModal" @toggleModal="closeModal()" :id="selectedId" />
   </div>
+
   <div>
     <SiteFooter />
   </div>
@@ -76,48 +80,61 @@ h1 {
   font-family: "Zen Dots", cursive;
   padding: 20px;
   font-size: 25px;
+  margin-right: 250px;
+}
+h2 {
+  color: white;
+  border-color: rgb(58, 186, 237);
+  border-width: 10px;
+  border-style: double;
+  font-family: "Zen Dots", cursive;
+  padding: 20px;
+  font-size: 25px;
+  margin-right: 1000px;
 }
 .purchase-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
 }
-
 img {
-  width: 195px;
+  width: 200px;
   border-style: double;
   border-color: rgb(58, 186, 237);
   border-width: 15px;
   margin-right: 10px;
   margin-top: 15px;
 }
-
 img:hover {
   border-color: white;
 }
-
 button:hover {
   border-color: white;
 }
-
 button {
   padding: 10px;
-  width: 100px;
-  font-size: 20px;
-  font-family: "Play", sans-serif;
-  border-color: rgb(58, 186, 237);
+  height: 100px;
+  width: 170px;
+  font-size: 50px;
+  font-family: "Courgette", cursive;
+  border-color: white;
   border-width: 5px;
+  position: relative;
+  top: -260px;
+  left: 800px;
 }
 .dropdown {
   padding: 10px;
-  width: 200px;
+  width: 250px;
   font-size: 20px;
-  font-family: "Play", sans-serif;
+  font-family: "Zen Dots", cursive;
   border-color: rgb(58, 186, 237);
   border-width: 5px;
   margin-left: 10px;
+  position: relative;
+  bottom: 130px;
+  left: 250px;
 }
-
 .footer {
   font-size: 15px;
   font-family: "Play", sans-serif;
@@ -127,5 +144,9 @@ button {
   color: navy;
   position: relative;
   top: 30px;
+}
+button:hover {
+  border-color: rgb(58, 186, 237);
+  border-width: 15px;
 }
 </style>

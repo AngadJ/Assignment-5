@@ -1,5 +1,6 @@
 <script setup>
 import { useStore } from "../store/index.js";
+
 const store = useStore();
 </script>
 
@@ -14,12 +15,20 @@ const store = useStore();
 
 <style scoped>
 img {
-  width: 200px;
-  aspect-ratio: 2 / 3;
+  width: 280px;
+  height: 400px;
+  border-style: double;
+  border-color: rgb(58, 186, 237);
+  border-width: 15px;
 }
-
 h1 {
   font-size: 30px;
   color: rgb(58, 186, 237);
+}
+button {
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Zen Dots", cursive;
+  margin-bottom: 20px;
 }
 </style>

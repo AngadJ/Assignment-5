@@ -8,26 +8,22 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/',
+      path: "/",
       component: HomeView,
     },
     {
-      path: '/login',
+      path: "/login",
       component: LoginView,
     },
     {
-      path: '/purchase',
+      path: "/purchase",
       component: PurchaseView,
     },
     {
       path: "/cart",
       component: CartView,
-    }
+    },
   ],
 });
 
 export default router;
-
-
-
-

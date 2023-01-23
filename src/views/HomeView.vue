@@ -5,12 +5,11 @@ import SiteFooter from "../components/SiteFooter.vue";
 </script>
 
 <template>
-    <div>
-        <SiteHeader />
-        <SiteHero />
-        <SiteFooter />
-    </div>
+  <div>
+    <SiteHeader />
+    <SiteHero />
+    <SiteFooter />
+  </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
